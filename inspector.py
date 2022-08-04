@@ -1,4 +1,3 @@
-from matplotlib.backends.qt_compat import QtWidgets
 import PyQt6.QtWidgets as w
 import matplotlib.pyplot as plt
 import PyQt6.QtGui as gui
