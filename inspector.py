@@ -1,10 +1,8 @@
-
-import PyQt6.QtWidgets as w
 from matplotlib.backends.qt_compat import QtWidgets
-import PyQt6.QtGui as gui
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-import sys
+import PyQt6.QtWidgets as w
 import matplotlib.pyplot as plt
+import PyQt6.QtGui as gui
+import sys
 
 # basic serializable types
 NONE = 0
@@ -237,9 +235,7 @@ class Inspector(w.QWidget):
                     splot.plot(points_x, datapoints)
 
                     figure.savefig('figure.png')
-                    #figure.canvas.draw()
-                # width, height = figure.figbbox.width, figure.figbbox.height
-                    #im = gui.QImage(canvas.buffer_rgba(), 500, 400, gui.QImage.Format_ARGB32)
+
                     self.plot.setPixmap(gui.QPixmap('figure.png'))
 
                     message = self.func_interactive_result_msg.replace("$result", str(datapoints[-1]))
@@ -290,4 +286,3 @@ if __name__ == "__main__":
         t = s/v
         y = - 9.8   * (t*t) / 2
         return y
-
