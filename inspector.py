@@ -272,17 +272,3 @@ def start():
     ip_wnd.init2()
     ip_wnd.show()
     ip_app.exec()
-
-# demo
-if __name__ == "__main__":
-    from PyQt6.QtWidgets import QApplication, QMainWindow
-    import PyQt6.QtWidgets as w
-    import sys
-
-    def trajectory(velocity, distance):
-        v = velocity
-        s = distance
-
-        t = s/v
-        y = - 9.8   * (t*t) / 2
-        return y
